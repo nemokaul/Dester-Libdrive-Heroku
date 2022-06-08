@@ -1,21 +1,9 @@
-<a href="https://github.com/Dester-Alken">
+<a href="https://github.com/">
   <h3 align="center">
     <img src="https://raw.githubusercontent.com/Dester-Alken/Dester-Web-Libdrive/0980ccdb8fc8ed3ddb894be97fd4b5155a3653fe/src/assets/logo-full.svg?token=AXDLWYSJ4BA365NWJJ434TDB4ML3C" width="600px" />
   </h3>
 </a>
-<a href="#">
-  <h3 align="center">
-    <img src="https://i.ibb.co/HVB5Dw1/lib-Drive-Header.png" width="600px" />
-  </h3>
-</a>
-<p align="center">
-  <a href="https://github.com/libDrive/libDrive/releases">
-    <img src="https://img.shields.io/github/downloads/libDrive/libDrive/total?color=%234197fe&style=for-the-badge" />
-  </a>
-  <a href="https://github.com/libDrive/libDrive/releases/latest">
-    <img src="https://img.shields.io/github/v/release/libDrive/libDrive?color=%234197fe&style=for-the-badge" />
-  </a>
-</p>
+
 <p align="center">
   <a href="https://heroku.com/deploy?template=https://github.com/nemokaul/Dester-Libdrive-Heroku">
     <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200" />
