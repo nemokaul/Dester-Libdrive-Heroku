@@ -1,19 +1,11 @@
-<a href="https://github.com/">
-  <h3 align="center">
-    <img src="https://raw.githubusercontent.com/Dester-Alken/Dester-Web-Libdrive/0980ccdb8fc8ed3ddb894be97fd4b5155a3653fe/src/assets/logo-full.svg?token=AXDLWYSJ4BA365NWJJ434TDB4ML3C" width="600px" />
-  </h3>
-</a>
+
 
 <p align="center">
   <a href="https://heroku.com/deploy?template=https://github.com/nemokaul/Dester-Libdrive-Heroku">
     <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200" />
   </a>
 </p>
-<p align="center">
-  <a href="https://t.me/libdrive_support">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/42px-Telegram_logo.svg.png" width="42" />
-  </a>
-</p>
+
 
 # What is this repo?
 
