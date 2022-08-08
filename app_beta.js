@@ -6264,7 +6264,7 @@ function file_video(path) {
 
   let player_items = [
       {
-          text: "PLAYit",
+          text: "PlayIT",
           href: `intent:${url}#Intent;package=com.playit.videoplayer;S.title=${path};end`,
       },
       {
@@ -6276,6 +6276,9 @@ function file_video(path) {
       },
       {
           text: "VLC", href: `vlc://${url}`
+      },
+      {
+          text: "PotPlayer", href: `potplayer://${url}`
       },
   ]
       .map(
@@ -6298,7 +6301,7 @@ function file_video(path) {
   const player_file = PLYR.player_dp;
 
   if (player_file.indexOf(`|${ext}|`) >= 0) {
-      playerUI = plyrUI;
+      playerUI = dpUI;
       if (ext == 'flv') {
           playerType = 'customFlv';
       } else if (ext == 'm3u8') {
@@ -6455,7 +6458,7 @@ function file_video(path) {
       window.player = player;
   }
   convertSRT2VTT();
-
+/*
   const dp = new DPlayer({
       container: document.getElementById('dplayer'),
       autoplay: PLYR.autoplay,
@@ -6506,8 +6509,9 @@ function file_video(path) {
           color: '#b7daff',
       },
   });
-  convertSRT2VTT();
+  convertSRT2VTT(); */
 }
+
 function file_audio(path) {
   var url = window.location.origin + path;
   var file_name = decodeURIComponent(path.trim("/").split("/").slice(-1)[0].replaceAll("%5C%5C", "%5C"));
