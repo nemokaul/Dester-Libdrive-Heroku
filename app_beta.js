@@ -6363,7 +6363,7 @@ function file_video(path) {
   var content = `
 <div class="mdui-container-fluid">
     <br>
-    ${playerUI}
+    <div class="mdui-video-fluid mdui-center" id="dplayer"></div>
     <br>${playBtn}
     <!-- Fixed Label -->
   <div class="mdui-textfield">
