@@ -6296,7 +6296,7 @@ function file_video(path) {
 
   var playerUI;
   var playerType;
-  const plyrUI = `<video id="player" class="mdui-video-fluid mdui-center" playsinline controls ></video>`;
+  const plyrUI = `<div id="player" class="mdui-video-fluid mdui-center" playsinline controls ></div>`;
   const dpUI = `<div id="dplayer" class="mdui-video-fluid mdui-center" ></div>`;
   const player_file = PLYR.player_dp;
 
