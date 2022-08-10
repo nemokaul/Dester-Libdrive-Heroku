@@ -5487,30 +5487,30 @@ if (UI.dark_mode) {
 }
 if (UI.dark_mode) {
   document.write(
-    '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cheems/goindex-extended@master/css/mdui_v2_dark.min.css">'
+    '<link rel="stylesheet" href="//rawcdn.githack.com/cheems/goindex-extended/b46bb643bb1c1314b669142e5e62d96a877b952b/css/mdui_v2_dark.min.css">'
   );
 } else {
   document.write(
-    '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cheems/goindex-extended@master/css/mdui_v2.min.css">'
+    '<link rel="stylesheet" href="//rawcdn.githack.com/cheems/goindex-extended/b46bb643bb1c1314b669142e5e62d96a877b952b/css/mdui_v2.min.css">'
   );
 }
 if (UI.dark_mode) {
   document.write(
-    '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cheems/goindex-extended@master/css/nexmoe_v2_dark.min.css">'
+    '<link rel="stylesheet" href="//rawcdn.githack.com/cheems/goindex-extended/f9af6b2192974a4a9c1b222efed8d29ca6cd1927/css/nexmoe_v2_dark.min.css">'
   );
 } else {
   document.write(
-    '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cheems/goindex-extended@master/css/nexmoe_v2.min.css>'
+    '<link rel="stylesheet" href="//rawcdn.githack.com/cheems/goindex-extended/f9af6b2192974a4a9c1b222efed8d29ca6cd1927/css/nexmoe_v2.min.css">'
   );
 }
 document.write(
-  '<script src="https://cdn.jsdelivr.net/gh/cheems/goindex-extended@master/css/mdui.min.css"></script>'
+  '<script src="//rawcdn.githack.com/cheems/goindex-extended/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/mdui.min.js"></script>'
 );
 document.write(
-  '<script src="https://cdn.jsdelivr.net/gh/cheems/goindex-extended@master/js/flv.min.js"></script>'
+  '<script src="//rawcdn.githack.com/cheems/goindex-extended/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/flv.min.js"></script>'
 );
 document.write(
-  '<script src="https://cdn.jsdelivr.net/gh/cheems/goindex-extended@master/js/DPlayer.min.js"></script>'
+  '<script src="//rawcdn.githack.com/cheems/goindex-extended/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/DPlayer.min.js"></script>'
 );
 document.write(
   '<script src="//cdn.jsdelivr.net/npm/marked@4.0.0/marked.min.js"></script>'
@@ -6246,14 +6246,13 @@ function file_video(path) {
   var file_name = decodeURIComponent(path.trim("/").split("/").slice(-1)[0].replaceAll("%5C%5C", "%5C"));
   let player_items = [
     {
-      text: "MXPlayer(Free)",
-      href: `intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${path};end`,
+      text: "PLAYit",
+      href: `intent:${url}#Intent;package=com.playit.videoplayer;S.title=${path};end`,
     },
     {
       text: "MXPlayer(Pro)",
       href: `intent:${url}#Intent;package=com.mxtech.videoplayer.pro;S.title=${path};end`,
     },
-    { text: "nPlayer", href: `nplayer-${url}` },
     { text: "VLC", href: `vlc://${url}` },
     { text: "PotPlayer", href: `potplayer://${url}` },
   ]
@@ -6279,12 +6278,7 @@ function file_video(path) {
 	  <label class="mdui-textfield-label">File Name</label>
 	  <input class="mdui-textfield-input" type="text" value="${file_name}"/>
   </div>
-	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Download Link</label>
-	  <input class="mdui-textfield-input" type="text" value="${url}"/>
-	</div>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
   $("#content").html(content);
   $("#copy-link").on("click", () => {
@@ -6298,10 +6292,8 @@ function file_video(path) {
     theme: '#448AFF',
     screenshot: true,
     preload: "auto",
-    playbackSpeed: [0.75, 1, 1.25, 1.5, 1.75, 2],
     video: {
-      quality: [{ url: url, type: "normal" }],
-      autoplay: true,
+      quality: [{ name: 'HD', url: url, type: "Default" }],
       defaultQuality: 0,
     },
   });
@@ -6326,7 +6318,7 @@ function file_audio(path) {
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+
 	`;
   $("#content").html(content);
 }
@@ -6345,11 +6337,6 @@ function file_pdf(path) {
 	  <label class="mdui-textfield-label">File Name</label>
 	  <input class="mdui-textfield-input" type="text" value="${display_name}"/>
   </div>
-	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Download Link</label>
-	  <input class="mdui-textfield-input" type="text" value="${url}"/>
-	</div>
-  <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
   $("#content")
     .removeClass("mdui-container")
@@ -6413,14 +6400,9 @@ function file_image(path) {
   <div class="mdui-textfield">
 	  <label class="mdui-textfield-label">File Name</label>
 	  <input class="mdui-textfield-input" type="text" value="${file_name}"/>
-  </div>
-	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Download Link</label>
-	  <input class="mdui-textfield-input" type="text" value="${url}"/>
-	</div>
-        <br>
+  </div>      <br>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+
     `;
   $("#content").html(content);
   $("#leftBtn, #rightBtn").click((e) => {
