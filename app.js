@@ -6271,7 +6271,7 @@ function file_video(path) {
   const content = `
 <div class="mdui-container-fluid">
 	<br>
-	<div class="mdui-video-fluid mdui-center" id="dplayer"></div>
+	<div class="mdui-video-fluid mdui-center" id="dplayer" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></div>
 	<br>${playBtn}
 	<!-- ???? -->
   <div class="mdui-textfield">
