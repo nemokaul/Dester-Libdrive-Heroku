@@ -6271,7 +6271,7 @@ function file_video(path) {
   const content = `
 <div class="mdui-container-fluid">
 	<br>
-	<div class="mdui-video-fluid mdui-center" id="dplayer" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></div>
+	<div class="mdui-video-fluid mdui-center" id="dplayer"></div>
 	<br>${playBtn}
 	<!-- ???? -->
   <div class="mdui-textfield">
@@ -6289,11 +6289,12 @@ function file_video(path) {
     container: document.getElementById("dplayer"),
     autoplay: true,
     hotkey:	true,
+    volume: 1.0,
     theme: '#448AFF',
     screenshot: true,
     preload: "auto",
     video: {
-      quality: [{ name: 'HD', url: url, type: "Default" }],
+      quality: [{url: url, type: "Default" }],
       defaultQuality: 0,
     },
   });
